@@ -23,6 +23,7 @@ require({
 		'dojo',
 		'dijit',
 		'dojox',
+		'jquery',
 
 		// For reference, this is what a more verbose package declaration looks like.
 		{ name: 'app', location: 'app', map: {} }

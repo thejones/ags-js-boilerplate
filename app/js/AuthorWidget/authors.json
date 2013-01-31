@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Name 1",
+		"avatar": "",
+		"bio": "Bio link to google <a href=\"http://www.google.com">Google/a>."
+	},
+	{
+		"name": "Name 2",
+		"avatar": "",
+		"bio": "BBio link to Esri <a href=\"http://www.esri.com\">Esri</a>."
+	},
+	{
+		"name": "Name 3",
+		"avatar": "",
+		"bio": "Bio link to Esri Canada <a href=\"http://www.esri.ca\">Esri Canada</a>."
+	},
+	{
+		"name": "Name 6",
+		"avatar": "",
+		"bio": "Bio link to Bearpanther <a href=\"http://www.bearpanther.com\">BearPanther</a>."
+	}
+]
