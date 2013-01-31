@@ -28,7 +28,18 @@
 
 		 NOTE: `build.sh` is responsible for removing the "isDebug" flag when deploying to production. If you modify
 		 this flag at all, you will break the build! -->
-    <script data-dojo-config="async: 1, tlmSiblingOfDojo: 0, isDebug: 1" src="dojo/dojo.js"></script>
+     <script>var dojoConfig = { 
+      packages: [
+      { "name": "js",
+      "location": location.pathname.replace(/\/[^/]+$/, "") + "/js"
+      },
+      { name: 'jquery', 
+        location: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1', 
+        main: 'jquery' 
+      }
+      ]
+    };</script>
+    <script src="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/"></script>
 
     <!-- Load the loader configuration script. Note that this module ID is hard-coded in build.sh in order to provide
          an optimised build that loads as few as one script for the entire application. If you change the name or
