@@ -5,6 +5,23 @@
  *
  * It is highly, highly recommended that you develop your CSS using Stylus: http://learnboost.github.com/stylus/.
  */
-
-@import '../../dojo/resources/dojo.css';
-@import '../../dijit/themes/claro/claro.css';
+html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+      #map{ margin: 0; padding: 0; }
+      #feedback {
+        background: #fff;
+        bottom: 30px;
+        color: #444;
+        position: absolute;
+        font-family: arial;
+        height: auto;
+        left: 30px;
+        margin: 5px;
+        padding: 10px;
+        width: 300px;
+        z-index: 40;
+      }
+      .shadow {
+        -moz-box-shadow: 0 0 5px #888;
+        -webkit-box-shadow: 0 0 5px #888;
+        box-shadow: 0 0 5px #888;
+      }
