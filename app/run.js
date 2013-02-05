@@ -1,10 +1,5 @@
 /**
- * This file is used to reconfigure parts of the loader at runtime for this application. We've put this extra
- * configuration in a separate file, instead of adding it directly to index.html, because it contains options that
- * can be shared if the application is run on both the client and the server.
- *
- * If you aren't planning on running your app on both the client and the server, you could easily move this
- * configuration into index.html (as a dojoConfig object) if it makes your life easier.
+ *Not currently using this file. Will include in future versions. 
  */
 
 require({
