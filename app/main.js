@@ -12,23 +12,18 @@ define(['require'], function (require) {
     var app = {};
 
 
-    require(["esri/map", "esri/layers/FeatureLayer", "js/Dialog", "js/SeatGeekUtils",
+    require(["esri/map", "esri/layers/FeatureLayer", "js/Dialog", "js/AgsGeocode",
         "dojo/parser", "dijit/layout/BorderContainer", "dijit/layout/ContentPane",
-        "dojo/domReady!"], function (Map, FeatureLayer, Dialog, SeatGeekSearch, parser) {
+        "dojo/domReady!"], function (Map, FeatureLayer, Dialog, AgsGeocode, parser) {
 
         // create the dijit layout widgets
         parser.parse();
+        /*Dialog from dojo-bootstrap*/
         app.dialog = new Dialog().placeAt(document.body);
-
-        // // It is important to remember to always call startup on widgets after you have added them to the DOM.
-        // // It will not hurt if you do it twice, but things will often not work right if you forget to do it.
         app.dialog.startup();
-
-        // // And now we just show the dialog to demonstrate that, yes, the example app has loaded successfully.
         app.dialog.show();
 
-
-        //Map code and SeatGeek setup
+        //Map code and Geocode startup
         var ext = new esri.geometry.Extent({
             "xmin": -17106023,
             "ymin": 2425274,
@@ -39,19 +34,20 @@ define(['require'], function (require) {
             }
         });
         app.map = new esri.Map("map", {
-            "extent": ext,
-            "slider": false,
-            "wrapAround180": true
+          basemap: "topo",
+          center: [-122.41, 37.75],
+          zoom: 14
         });
 
-        var basemap = new esri.layers.ArcGISTiledMapServiceLayer("http://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer");
-        app.map.addLayer(basemap);
+       
 
         dojo.connect(app.map, "onLoad", function () {
             dojo.connect(dijit.byId("map"), "resize", app.map, map.resize);
         });
 
-
+        app.agsGeocode = new AgsGeocode({"map": app.map});
+        app.agsGeocode.createGeocode();
+        
     });
 
 });
