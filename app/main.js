@@ -6,13 +6,13 @@
  */
 define(['require'], function (require) {
 
-    dojo.require("esri.map");
-    dojo.require('esri.dijit.Popup');
+    /*dojo.require("esri.map");
+    dojo.require('esri.dijit.Popup');*/
 
     var app = {};
 
 
-    require(["esri/Map", "esri/layers/FeatureLayer", "js/Dialog", "js/SeatGeekUtils",
+    require(["esri/map", "esri/layers/FeatureLayer", "js/Dialog", "js/SeatGeekUtils",
         "dojo/parser", "dijit/layout/BorderContainer", "dijit/layout/ContentPane",
         "dojo/domReady!"], function (Map, FeatureLayer, Dialog, SeatGeekSearch, parser) {
 
