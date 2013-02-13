@@ -1,0 +1,24 @@
+
+.exampleWidget {
+	top: 10px;
+  	color: #444;
+  	background-color: #fff;
+  	position: absolute;
+  	font-family: arial;
+	border: 1px solid black;
+	width: 200px;
+	height: 300px;
+	padding: 10px;
+	top:10px;
+	right: 40px;
+	z-index: 400;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.exampleWidget h3 {
+	font-size: 1.5em;
+	font-style: italic;
+	text-align: center;
+	margin: 0px;
+}

@@ -1,7 +1,7 @@
 
 define([ "dojo/_base/declare","esri/dijit/Geocoder"], 
   function(declare,Geocoder) {
-    return declare([], {    
+    return declare(null, {    
       map: null,
 
       constructor: function(options){
