@@ -10,7 +10,9 @@
 
     <script>var dojoConfig = { 
       async: true,
-      
+      cacheBust:new Date(), 
+      parseOnLoad:false,
+      waitSeconds:5,
       packages: [
       { "name": "js", 
         "location": location.pathname.replace(/\/[^/]+$/, "") + "/app/js"
